@@ -1,3 +1,6 @@
 import input_process_output
 
-input_process_output.display_output()
+def main():
+    input_process_output.display_output()
+
+main()
