@@ -6,7 +6,7 @@ def main():
 
     #code to check that num1 is a numeric
 
-    result = input_process_output.add_numbers(int(num1), int(num2)) #convert num1, num2 to int
+    result = input_process_output.add_numbers(float(num1), float(num2)) #convert num1, num2 to int
     print(result)
 
 main() #runs the code on line 3
