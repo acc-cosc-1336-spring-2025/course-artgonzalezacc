@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.c_decisions.decisions import test_config
+from src.examples.c_decisions.decisions import compare_numbers_equality, test_config
 
 class Test_Config(unittest.TestCase):
 
@@ -25,4 +25,8 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(not False, True)
         self.assertEqual(not True, False)
+
+    def test_compare_numbers_equality(self):
+        self.assertEqual(compare_numbers_equality(10, 5), False)
+        self.assertEqual(compare_numbers_equality(10, 10), True)
 
