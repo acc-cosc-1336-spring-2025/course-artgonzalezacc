@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.c_decisions.decisions import compare_numbers_equality, is_consonant, is_even, is_number_in_range, is_vowel, test_config
+from src.examples.c_decisions.decisions import compare_numbers_equality, get_generation, is_consonant, is_even, is_number_in_range, is_vowel, test_config
 
 class Test_Config(unittest.TestCase):
 
@@ -54,4 +54,15 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(is_even(3), False)#not even
         self.assertEqual(is_even(2), True)#even
         self.assertEqual(is_even(5), False)
+
+    def test_get_generation(self):
+        self.assertEqual(get_generation(1900), "Invalid Year")
+        self.assertEqual(get_generation(1920), "The Greatest Generation")
+        self.assertEqual(get_generation(1930), "The Silent Generation")
+        self.assertEqual(get_generation(1950), "Baby Boomer Generation")
+        self.assertEqual(get_generation(1970),  "Generation X")
+        self.assertEqual(get_generation(1985), "Generation Y")
+        self.assertEqual(get_generation(2000), "Generation Z")
+        self.assertEqual(get_generation(2020), "Generation Alpha")
+        self.assertEqual(get_generation(2030),  "Invalid Year")
 

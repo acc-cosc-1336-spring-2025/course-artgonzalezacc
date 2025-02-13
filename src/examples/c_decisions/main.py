@@ -1,16 +1,12 @@
 import decisions
 
 def main():
-    num = input("Enter a number: ")
+    year = input("Enter a year: ")
     
-    result = decisions.is_even(int(num))
+    result = decisions.get_generation(int(year))
     
     print(result)
     
-    if(result):
-        print(num, " is even")
-    else:
-        print(num, "is odd")
     
 
 main()
