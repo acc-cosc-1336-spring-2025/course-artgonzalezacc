@@ -16,4 +16,7 @@ def is_vowel(letter):
 def is_consonant(letter):
     return not(is_vowel(letter))
 
+def is_even(num):
+    return num % 2 == 0
+
     
