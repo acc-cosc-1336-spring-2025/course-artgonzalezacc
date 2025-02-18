@@ -2,11 +2,10 @@ import repetition
 
 
 def main():
-    num = input("Enter a number: ")#captured from keyboard as a string
+    #num = input("Enter a number: ")#captured from keyboard as a string
     
-    result = repetition.get_sum_of_squares(int(num)) #int means convert num to a number
+    repetition.run_menu()
     
-    print(result)
 
 #run the main function
 main()
