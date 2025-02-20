@@ -71,3 +71,16 @@ def get_sum_of_squares_for(num):
         sum += (n+1) * (n+1) #square     sum += is the same as sum = sum + something
     
     return sum
+
+def nested_while_loop(num):
+    i = 0
+
+    while(i < num):
+        j = 0
+        print("Waiting for inner while loop...")
+
+        while(j < num):
+            print("\tInner while loop running...")
+            j += 1
+        
+        i += 1
