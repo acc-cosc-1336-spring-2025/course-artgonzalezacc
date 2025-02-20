@@ -2,7 +2,7 @@ import repetition
 
 
 def main():
-    result = repetition.for_nested_loop(2)
+    result = repetition.mulitiplication_table_while(10, 10)
 
     
 
