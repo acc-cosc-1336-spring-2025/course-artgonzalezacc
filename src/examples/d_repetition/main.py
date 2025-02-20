@@ -2,7 +2,7 @@ import repetition
 
 
 def main():
-    result = repetition.nested_while_loop(2)
+    result = repetition.for_nested_loop(2)
 
     
 
