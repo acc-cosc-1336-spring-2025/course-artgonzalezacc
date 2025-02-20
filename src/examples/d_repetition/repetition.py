@@ -60,3 +60,14 @@ def use_a_for_range_loop(num):
     
     for val in range(0, num):
         print(val, "hello");
+
+#3   1*1 + 2*2 + 3*3 = 14
+#4    1*1 + 2*2 + 3*3 + 4*4 = 30
+#5    1*1 + 2*2 + 3*3 + 4*4  + 5*5= 55
+def get_sum_of_squares_for(num):
+    sum = 0
+
+    for n in range(0, num):
+        sum += (n+1) * (n+1) #square     sum += is the same as sum = sum + something
+    
+    return sum
