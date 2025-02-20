@@ -55,4 +55,8 @@ def handle_menu(user_option):
         print('Exiting...')
     else:
         print("Invalid menu option")
-         
+
+def use_a_for_range_loop(num):
+    
+    for val in range(0, num):
+        print(val, "hello");
