@@ -1,11 +1,11 @@
 #main program
-import void_functions
+import value_return_functions
 
 def main():
     num = 3
 
-    void_functions.display_hello(num)#num is a parameter(variable)
+    result = value_return_functions.echo_variable(num)
 
-    print(num)
+    print(result)
 
 main()
