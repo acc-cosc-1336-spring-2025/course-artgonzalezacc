@@ -2,8 +2,10 @@
 import void_functions
 
 def main():
-    lang = "Python"
-    void_functions.say_hello()
-    print(lang)
+    num = 3
+
+    void_functions.display_hello(num)#num is a parameter(variable)
+
+    print(num)
 
 main()
