@@ -1,11 +1,12 @@
 #main program
 import value_return_functions
 
+
 def main():
-    num = 3
 
-    result = value_return_functions.echo_variable(num)
+    value_return_functions.write_global_variable()
+    #value_return_functions.read_global_variable()
+    
 
-    print(result)
 
 main()
