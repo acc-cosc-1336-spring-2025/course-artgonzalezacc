@@ -1,11 +1,9 @@
 #main program
 
 def main():
-    lang = 'C++'
-    print(lang)
-    print(lang.isalpha())
-
-    lang = 'PYTHON'
-    print(lang.isupper())
+    lang = 'python'
+    print(lang[0])
+    #concept of the length / size of the string
+    print(len(lang))
 
 main()
