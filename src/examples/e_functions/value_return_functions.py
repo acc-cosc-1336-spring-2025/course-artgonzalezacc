@@ -1,3 +1,5 @@
+import random
+
 value = 100 #global variable
 VALUE = 1000 #GLOBAl constant - read only
 
@@ -17,3 +19,6 @@ def write_global_variable():
     global VALUE
     VALUE = 10001  
     print(VALUE)
+
+def get_random_number(min, max):
+    return random.randint(min, max) #using a built-in Python module

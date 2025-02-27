@@ -4,9 +4,9 @@ import value_return_functions
 
 def main():
 
-    value_return_functions.write_global_variable()
-    #value_return_functions.read_global_variable()
-    
+    for i in range(0, 100):
+        result = value_return_functions.get_random_number(1, 100)  
+        print(result)  
 
 
 main()
