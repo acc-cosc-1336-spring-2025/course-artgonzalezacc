@@ -2,7 +2,8 @@
 import strings
 
 def main():
-    strings.string_params("test")
+    str = "python"
+    strings.string_loop_w_while(str)
     
 
 main()
