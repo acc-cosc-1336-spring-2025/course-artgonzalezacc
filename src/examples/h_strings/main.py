@@ -1,10 +1,8 @@
 #main program
+import strings
 
 def main():
-    lang = 'python'
-    print(lang)
-    lang = lang + ' is great' #concatenation
-    print(lang)
+    strings.string_params("test")
     
 
 main()
