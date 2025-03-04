@@ -33,5 +33,12 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(is_in, True)
 
+    def test_search_string_w_in_2(self):
+        text = "Four score and seven years ago"
+
+        is_in = 'Seven' in text
+
+        self.assertEqual(is_in, False)
+
     
 
