@@ -26,3 +26,5 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(lang, "Python")
         self.assertEqual(lang1, "C++")
 
+    
+
