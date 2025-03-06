@@ -47,5 +47,22 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(not_in, True)
 
+    def test_string_isdigit(self):
+        str = "123"
+
+        self.assertEqual(str.isdigit(), True)
+
+    def test_string_not_isdigit(self):
+        str = "OneTwoThree"
+
+        self.assertEqual(str.isdigit(), False)
+
+    def test_string_isupper(self):
+        str = "OneTwoThree"
+
+        self.assertEqual(str.isupper(), False)
+
+    
+
     
 
