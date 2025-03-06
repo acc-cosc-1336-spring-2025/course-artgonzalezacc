@@ -28,6 +28,14 @@ def string_loop_w_for_range(str):
     for index in range(0, length):
         print(str[index], index, length)
 
+def string_loop_w_for(str):
+
+    for ch in str: #Python
+        print(ch)
+        ch = 'a'#doesn't change str; only changes the ch variable
+        
+    print(str)
+
         
 
 
