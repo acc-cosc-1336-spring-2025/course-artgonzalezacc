@@ -62,6 +62,24 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(str.isupper(), False)
 
+    def test_string_lower(self):
+        str = "aBCd"
+
+        self.assertEqual(str.lower(), "abcd")
+
+    def test_string_upper(self):
+        str = 'abcd'
+
+        self.assertEqual(str.upper(), "ABCD")
+        self.assertEqual(str, "abcd")
+
+    def test_string_rstrip(self):
+        str = 'abcd '
+        expected_str = 'abcd'
+        stripped_str = str.rstrip()
+
+        self.assertEqual(expected_str, stripped_str)
+
     
 
     
