@@ -36,6 +36,40 @@ def string_loop_w_for(str):
         
     print(str)
 
+#The password must be at least seven characters long.
+
+#It must contain at least one uppercase letter.
+
+#It must contain at least one lowercase letter.
+
+#It must contain at least one numeric digit
+def validate_password(password):
+    correct_length = 7
+    has_uppercase = False
+    has_lowercase = False
+    has_digit = False
+    
+    if(len(password) >= 7):
+        correct_length = True
+
+        for ch in password:
+            if ch.upper():
+               has_uppercase = True
+            if ch.islower():
+               has_lowercase = True
+            if ch.isdigit():
+               has_digit = True
+
+        if correct_length and has_uppercase and has_lowercase and has_digit:
+           is_valid = True
+        else:
+           is_valid = False
+
+        return is_valid
+            
+            
+
+
         
 
 

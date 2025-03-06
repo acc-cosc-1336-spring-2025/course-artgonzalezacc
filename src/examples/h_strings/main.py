@@ -2,7 +2,12 @@
 import strings
 
 def main():
-    strings.string_loop_w_for("Python")
     
+    password = ""
+
+    while not strings.validate_password(password):
+        password = input("Enter password")
+
+    print(password)
 
 main()

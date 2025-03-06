@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.h_strings.strings import string_params, string_return_value, test_config
+from src.examples.h_strings.strings import string_params, string_return_value, test_config, validate_password
 
 class Test_Config(unittest.TestCase):
 
@@ -91,6 +91,16 @@ class Test_Config(unittest.TestCase):
         index = text.find("Score")
 
         self.assertEqual(index, -1)
+
+    def test_validate_password(self):
+        password = 'Leopard6'
+
+        self.assertEqual(validate_password(password), True)
+
+    def test_invalid_password(self):
+        password = 'kangaroo'
+
+        self.assertEqual(validate_password(password), False)
 
 
     
