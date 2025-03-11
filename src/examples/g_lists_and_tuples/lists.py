@@ -39,3 +39,17 @@ def use_float_array():
     for i in range(0, size):
         print(float_array[i])
 
+def use_char_array():
+    char_array = array.array('u')
+
+    char_array.append('P')
+    char_array.append('y')
+    char_array.append('t')
+    char_array.append('h')
+    char_array.append('o')
+    char_array.append('n')
+    
+
+    for ch in char_array:
+        print(ch)
+

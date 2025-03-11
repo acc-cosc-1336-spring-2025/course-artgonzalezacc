@@ -1,4 +1,4 @@
 #main program
 import lists
 
-lists.use_float_array()
+lists.use_int_array()
