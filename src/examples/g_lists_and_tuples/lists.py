@@ -53,3 +53,14 @@ def use_char_array():
     for ch in char_array:
         print(ch)
 
+def arrays_in_memory():
+    int_array = array.array('i')
+    print(id(int_array))
+
+    int_array.append(7)
+    print(id(int_array[0]))
+
+    int_array.append(20)
+    print(id(int_array[1]))
+
+    
