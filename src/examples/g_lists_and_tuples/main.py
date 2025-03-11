@@ -1,4 +1,4 @@
 #main program
 import lists
 
-lists.use_int_array()
+lists.modify_list_array_elements()

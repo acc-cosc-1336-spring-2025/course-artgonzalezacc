@@ -14,3 +14,11 @@ def use_int_array():
 
     list_array.append(5)
     print(list_array[2])
+
+def modify_list_array_elements():
+    list_array = array.array('i', [3, 1, 5])
+    print(list_array[2])
+
+    list_array[1] = 2
+
+    print(list_array[1])
