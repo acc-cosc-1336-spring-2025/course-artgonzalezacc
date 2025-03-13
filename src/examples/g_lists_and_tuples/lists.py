@@ -63,4 +63,8 @@ def arrays_in_memory():
     int_array.append(20)
     print(id(int_array[1]))
 
+def intro_to_lists():
+    even_numbers = [2, 4, 6, 8, 10] # list
+    print(even_numbers)
+
     

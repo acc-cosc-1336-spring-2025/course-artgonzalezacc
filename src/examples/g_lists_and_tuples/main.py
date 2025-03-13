@@ -1,4 +1,4 @@
 #main program
 import lists
 
-lists.arrays_in_memory()
+lists.intro_to_lists()
