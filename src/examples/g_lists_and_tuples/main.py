@@ -1,4 +1,4 @@
 #main program
 import lists
 
-lists.intro_to_lists()
+lists.loop_list_w_while()
