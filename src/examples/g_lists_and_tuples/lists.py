@@ -75,6 +75,12 @@ def loop_list_w_while():
         print(even_numbers[index])
         index += 1
 
+def loop_list_w_for():
+    even_numbers = [2, 4, 6, 8, 10]
+
+    for index in range(0, len(even_numbers)):
+        print(index, even_numbers[index])
+
 
 
     
