@@ -115,5 +115,13 @@ def get_total_value_of_list_items_while():
 
     return total
 
+def get_total_value_of_list_items_for_range():
+    total = 0
+    list1 = [2,4,6,8,10]
+
+    for i in range(0, len(list1)):
+        total += list1[i]
+
+    return total
 
     

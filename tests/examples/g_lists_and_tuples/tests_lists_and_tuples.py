@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter, list_as_return_value, list_as_return_value_no_param, get_total_value_of_list_items_while
+from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter, list_as_return_value, list_as_return_value_no_param, get_total_value_of_list_items_while, get_total_value_of_list_items_for_range
     
 
 class Test_Config(unittest.TestCase):
@@ -45,3 +45,7 @@ class Test_Config(unittest.TestCase):
     def test_get_total_value_of_list_items_while(self):
 
         self.assertEqual(get_total_value_of_list_items_while(), 30)
+
+    def test_get_total_value_of_list_items_for_range(self):
+
+        self.assertEqual(get_total_value_of_list_items_for_range(), 30)
