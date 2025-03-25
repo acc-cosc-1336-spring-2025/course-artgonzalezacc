@@ -87,6 +87,9 @@ def loop_list_w_for_():
     for num in even_numbers:
         print(num)
 
+def list_as_parameter(list1):
+    list1[0] = 100
+
 
 
     
