@@ -97,6 +97,12 @@ def list_as_return_value(list1):
     print('list ret value: ' + str(id(list1[0])))
     return list1
 
+def list_as_return_value_no_param():
+    list1 = [5, 3, 10]
+    print('list ret value: ' + str(id(list1[0])))
+
+    return list1
+
 
 
     

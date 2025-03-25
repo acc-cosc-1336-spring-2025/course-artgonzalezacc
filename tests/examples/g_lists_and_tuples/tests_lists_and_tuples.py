@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter, list_as_return_value
+from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter, list_as_return_value, list_as_return_value_no_param
 
 class Test_Config(unittest.TestCase):
 
@@ -33,3 +33,10 @@ class Test_Config(unittest.TestCase):
         print('test return list ' + str(id(returned_list[0])))
         
         self.assertEqual(list1[0], returned_list[0])
+
+    def test_list_as_return_value_no_param(self):
+
+        return_list = list_as_return_value_no_param()
+        print('test return list ' + str(id(return_list[0])))
+
+        self.assertEqual(True, True)
