@@ -124,4 +124,12 @@ def get_total_value_of_list_items_for_range():
 
     return total
 
+def get_total_value_of_list_items_for():
+    total = 0
+    list1 = [2,4,6,8,10]
+
+    for n in list1:
+        total += n
+    
+    return total
     
