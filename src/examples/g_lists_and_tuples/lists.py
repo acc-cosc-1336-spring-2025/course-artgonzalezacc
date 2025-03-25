@@ -91,6 +91,12 @@ def list_as_parameter(list1):
     print(id(list1[0]))
     list1[0] = 100
 
+def list_as_return_value(list1):
+    list1[0] = 100
+
+    print('list ret value: ' + str(id(list1[0])))
+    return list1
+
 
 
     
