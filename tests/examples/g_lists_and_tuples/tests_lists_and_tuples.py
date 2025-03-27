@@ -53,3 +53,31 @@ class Test_Config(unittest.TestCase):
     def test_get_total_value_of_list_items_for(self):
 
         self.assertEqual(get_total_value_of_list_items_for(), 30)
+
+    def test_two_dimensional_list_indexing(self):
+        sub_list1 = [20, 5, 10]
+        sub_list2 = [100, 150, 75]
+        sub_list3 = [7, 10, 15]
+
+        two_d_list = [sub_list1, sub_list2, sub_list3]
+
+        self.assertEqual(two_d_list[0][0], 20)
+        self.assertEqual(two_d_list[0][1], 5)
+        self.assertEqual(two_d_list[0][2], 10)
+        self.assertEqual(two_d_list[1][0], 100)
+        self.assertEqual(two_d_list[1][1], 150)
+        self.assertEqual(two_d_list[1][2], 75)
+        self.assertEqual(two_d_list[2][0], 7)
+        self.assertEqual(two_d_list[2][1], 10)
+        self.assertEqual(two_d_list[2][2], 15)
+
+    def test_two_dimensional_list_row_indexing(self):
+        sub_list1 = [20, 5, 10]
+        sub_list2 = [100, 150, 75]
+        sub_list3 = [7, 10, 15]
+
+        two_d_list = [sub_list1, sub_list2, sub_list3]
+
+        self.assertEqual(two_d_list[0], sub_list1)
+        self.assertEqual(two_d_list[1], sub_list2)
+        self.assertEqual(two_d_list[2], sub_list3)
