@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter, list_as_return_value, list_as_return_value_no_param, get_total_value_of_list_items_while, get_total_value_of_list_items_for_range, get_total_value_of_list_items_for
+from src.examples.g_lists_and_tuples.lists import test_config, list_as_parameter, list_as_return_value, list_as_return_value_no_param, get_total_value_of_list_items_while, get_total_value_of_list_items_for_range, get_total_value_of_list_items_for, get_multiplication_table
     
 
 class Test_Config(unittest.TestCase):
@@ -81,3 +81,14 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(two_d_list[0], sub_list1)
         self.assertEqual(two_d_list[1], sub_list2)
         self.assertEqual(two_d_list[2], sub_list3)
+
+    def test_multiplication_table_3x3(self):
+        expected_ones_row = [1, 2, 3]
+        expected_twos_row = [2, 4, 6]
+        expected_threes_row =[3, 6, 9]
+
+        multi_table = get_multiplication_table(3, 3)
+
+        self.assertEqual(multi_table[0], expected_ones_row)
+        self.assertEqual(multi_table[1], expected_twos_row)
+        self.assertEqual(multi_table[2], expected_threes_row)

@@ -1,4 +1,8 @@
 #main program
 import lists
 
-lists.loop_list_w_for_()
+def main():
+    list1 = lists.get_multiplication_table(10, 10)
+    lists.display_multiplication_table(list1)
+
+main()
