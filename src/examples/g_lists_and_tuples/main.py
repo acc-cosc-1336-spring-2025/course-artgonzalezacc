@@ -1,8 +1,9 @@
 #main program
-import lists
+import tuples
 
 def main():
-    list1 = lists.get_multiplication_table(10, 10)
-    lists.display_multiplication_table(list1)
+    #tuples.loop_a_tuple()
+    tuples.convert_tuple_to_list()
+    tuples.convert_list_to_tuple()
 
 main()
