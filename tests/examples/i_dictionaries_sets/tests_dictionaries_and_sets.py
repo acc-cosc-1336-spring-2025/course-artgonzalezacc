@@ -21,3 +21,15 @@ class Test_Config(unittest.TestCase):
         with self.assertRaises(KeyError):
              phone_book['Sam']
 
+    def test_key_in_dictionary(self):
+        phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
+
+        self.assertEqual('Katie' in phone_book, True)
+        self.assertEqual('Sam' in phone_book, False)
+
+    def test_key_not_in_dictionary(self):
+        phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
+        
+        self.assertEqual('Sam' not in phone_book, True)
+        self.assertEqual('Katie' not in phone_book, False)
+
