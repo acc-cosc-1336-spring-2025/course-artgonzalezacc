@@ -62,3 +62,20 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(len(phone_book), 3)
 
+    def test_dictionary_supports_different_data_value_types(self):
+        phone_book = {'Chris':5551111, 'Katie':'555-2222', 'Joanne':[555,3333]}
+
+        self.assertEqual(phone_book['Chris'], 5551111)
+        self.assertEqual(phone_book['Katie'], '555-2222')
+        self.assertEqual(phone_book['Joanne'], [555,3333])
+
+    def test_dictionary_supports_data_key_types(self):
+        phone_book = {5551111:'Cris', 'Katie':'555-2222', 50.5:'Joanne'}
+
+        self.assertEqual(phone_book[5551111], 'Cris')
+        self.assertEqual(phone_book['Katie'], '555-2222')
+        self.assertEqual(phone_book[50.5], 'Joanne')
+
+
+
+
