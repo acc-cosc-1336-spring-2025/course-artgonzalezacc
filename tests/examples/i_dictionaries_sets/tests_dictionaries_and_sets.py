@@ -57,3 +57,8 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual('Chris' not in phone_book, True)
 
+    def test_get_number_of_elements_dictionary(self):
+        phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
+
+        self.assertEqual(len(phone_book), 3)
+
