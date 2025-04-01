@@ -83,7 +83,16 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(employee['id'] ,12345)
         self.assertEqual(employee['payrate'], 25.75)
 
+    def test_insert_into_empty_dictionary(self):
+        #phone_book = {}
+        phone_book = dict()
+        phone_book['Chris'] = '555-1111'
+        phone_book['Katie'] = '555-2222'
+        phone_book['Joanne'] = '555-3333'
 
+        self.assertEqual(phone_book['Chris'], '555-1111')
+        self.assertEqual(phone_book['Katie'], '555-2222')
+        self.assertEqual(phone_book['Joanne'], '555-3333')
 
 
 
