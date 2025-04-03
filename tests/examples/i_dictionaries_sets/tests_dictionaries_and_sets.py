@@ -173,6 +173,35 @@ class Test_Config(unittest.TestCase):
 
         self.assertEqual(sym_difference_set, expected_set)
 
+    def test_students_play_basketball_and_baseball(self):
+        baseball=set(['Jodi','Carmen','Aida','Alicia'])
+        basketball=set(['Eva','Carmen','Alicia','Sarah'])
+
+        expected = (['Carmen', 'Alicia'])
+        both_sports = baseball.intersection(basketball)
+
+    def test_students_play_basketball_or_baseball(self):
+        baseball=set(['Jodi','Carmen','Aida','Alicia'])
+        basketball=set(['Eva','Carmen','Alicia','Sarah'])
+
+        expected = set(['Jodi', 'Carmen', 'Eva', 'Aida', 'Alicia', 'Sarah'])
+        or_set = baseball.union(basketball)
+
+        self.assertEqual(or_set, expected)
+
+    def test_students_play_baseball_not_basketball(self):
+        baseball=set(['Jodi','Carmen','Aida','Alicia'])
+        basketball=set(['Eva','Carmen','Alicia','Sarah'])
+
+        expected = set(['Jodi', 'Aida'])
+        baseball_not_basketball_set = baseball.difference(basketball)
+
+        self.assertEqual(baseball_not_basketball_set, expected)
+
+
+
+    
+
 
 
 
