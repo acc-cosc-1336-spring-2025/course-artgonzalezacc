@@ -3,6 +3,8 @@ import dictionaries
 
 
 def main():
-    dictionaries.loop_dictionary_w_for()
+    dictionaries.dictionary_items()
+    dictionaries.dictionary_keys()
+    dictionaries.dictionary_values()
 
 main()
