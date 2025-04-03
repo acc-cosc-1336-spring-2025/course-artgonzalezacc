@@ -94,5 +94,57 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(phone_book['Katie'], '555-2222')
         self.assertEqual(phone_book['Joanne'], '555-3333')
 
+    def test_dictionary_clear(self):
+        phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
+
+        phone_book.clear()
+        self.assertEqual(phone_book, {})
+
+    def test_dictionary_get(self):
+        phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
+
+        result = phone_book.get('Katie', 'Key not found')
+        self.assertEqual(result, '555-2222')
+
+        result = phone_book.get('Katy', "Key not found")
+        self.assertEqual(result, 'Key not found')
+
+    def test_dictionary_items(self):
+        phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
+        list_tuple_items = list(phone_book.items()) #[('key', 'value'), ('key2', 'value2') ]
+        
+        self.assertEqual(list_tuple_items[0], ('Chris', '555-1111'))
+        self.assertEqual(list_tuple_items[1], ('Katie', '555-2222'))
+        self.assertEqual(list_tuple_items[2], ('Joanne', '555-3333'))
+
+    def test_dictionary_pop_item(self):
+        phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
+        key, value = phone_book.popitem()
+
+        self.assertEqual(key, 'Joanne')
+        self.assertEqual(value, '555-3333')
+        self.assertEqual(phone_book, {'Chris':'555-1111', 'Katie':'555-2222'})
+
+    def test_dictionary_values(self):
+        phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
+        list_values = list(phone_book.values())
+
+        self.assertEqual(list_values[0], '555-1111')
+        self.assertEqual(list_values[1], '555-2222')
+        self.assertEqual(list_values[2], '555-3333')
+
+    def test_dictionary_keys(self):
+        phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
+        list_keys = list(phone_book.keys())
+
+        self.assertEqual(list_keys[0], 'Chris')
+        self.assertEqual(list_keys[1], 'Katie')
+        self.assertEqual(list_keys[2], 'Joanne')
+
+
+    
+
+
+
 
 
