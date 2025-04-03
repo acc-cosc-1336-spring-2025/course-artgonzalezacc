@@ -141,6 +141,40 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(list_keys[1], 'Katie')
         self.assertEqual(list_keys[2], 'Joanne')
 
+    def test_set_union(self):
+        set1 = set([1,2,3,4])        
+        set2 = set([3,4,5,6])
+        expected_set = set([1,2,3,4,5,6])
+        union_set = set1.union(set2)
+
+        self.assertEqual(union_set, expected_set)
+
+    def test_set_intersection(self):
+        set1 = set([1,2,3,4])        
+        set2 = set([3,4,5,6])
+        expected_set = set([3,4])
+        intersection_set = set1.intersection(set2)
+
+        self.assertEqual(intersection_set, expected_set)
+
+    def test_set_difference(self):
+        set1 = set([1,2,3,4])        
+        set2 = set([3,4,5,6])
+        expected_set = set([1,2])
+        difference_set = set1.difference(set2)
+
+        self.assertEqual(difference_set, expected_set)
+
+    def test_set_symmetric_difference(self):
+        set1 = set([1,2,3,4])        
+        set2 = set([3,4,5,6])
+        expected_set = set([1,2,5,6])
+        sym_difference_set = set1.symmetric_difference(set2)
+
+        self.assertEqual(sym_difference_set, expected_set)
+
+
+
 
     
 
