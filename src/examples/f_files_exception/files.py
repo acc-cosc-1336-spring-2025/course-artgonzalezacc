@@ -37,3 +37,11 @@ def read_from_file_w_while_loop(file_name):
         line = file.readline().rstrip('\n')
 
     file.close()
+
+def read_from_file_w_for(file_name):
+    file = open(file_name, 'r')
+
+    for line in file:
+        print(line.rstrip('\n'))
+
+    file.close()
