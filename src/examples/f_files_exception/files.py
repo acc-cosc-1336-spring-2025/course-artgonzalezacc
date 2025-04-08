@@ -78,3 +78,16 @@ def read_employee_records(file_name):
 
     file.close()
 
+def write_prog_lang_list_of_lists(file_name):
+    file = open(file_name, 'w')
+
+    prog_langs = [['1980', 'C++', 'Complex'], ['1996', 'Python', 'Easy'], ['1991', 'Java', 'Medium']]
+
+    for lang in prog_langs:
+        file.write(lang[0] + '\t')#year
+        file.write(lang[1] + '\t')#lang
+        file.write(lang[2] + '\n')
+    
+    file.close()
+
+

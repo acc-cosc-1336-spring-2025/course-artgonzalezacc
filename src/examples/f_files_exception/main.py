@@ -2,9 +2,8 @@
 import files
 
 def main():
-    file_name = 'employees.txt'
+    file_name = 'langs.txt'
 
-    #files.write_employee_records(file_name)
-    files.read_employee_records(file_name)
+    files.write_prog_lang_list_of_lists(file_name)
 
 main()
