@@ -2,9 +2,8 @@
 import files
 
 def main():
-    file_name = 'langs_d.txt'
-    #files.write_dictionary_records(file_name)
-    files.read_dictionary_records(file_name)
+    file_name = 'phone_book.txt'
+    files.pickle_dictionary(file_name)
     
 
 main()

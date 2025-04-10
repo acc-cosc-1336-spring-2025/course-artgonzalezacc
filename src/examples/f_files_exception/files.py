@@ -1,4 +1,6 @@
 #
+import pickle
+
 def write_to_file(file_name):
     file = open(file_name, 'w') #open a text file for writing
 
@@ -139,4 +141,11 @@ def read_dictionary_records(file_name):
             prog_langs[key] = [year, lang, creator]
     
     print(prog_langs)
+
+def pickle_dictionary(file_name):
+
+    phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
+
+    with open(file_name, 'wb') as file: 
+        pickle.dump(phone_book, file)
 
