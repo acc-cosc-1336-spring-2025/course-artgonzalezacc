@@ -112,4 +112,16 @@ def read_prog_lang_list_of_lists(file_name):
 
     file.close()
 
+def write_dictionary_records(file_name):
+
+    prog_langs = {'1' : ['1979', 'C++', 'Bjarne'], '2': ['1991', 'Java', 'Gosling'], '3': ['1996', 'Python', 'Guido']}
+
+    with open(file_name, 'w') as file:
+        for key, value in prog_langs.items():
+             record_list = value
+             file.write(key + '\t') #record identifier
+             file.write(record_list[0] + '\t')#year
+             file.write(record_list[1] + '\t')#language
+             file.write(record_list[2] + '\n')#creator
+
 
