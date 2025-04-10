@@ -124,4 +124,19 @@ def write_dictionary_records(file_name):
              file.write(record_list[1] + '\t')#language
              file.write(record_list[2] + '\n')#creator
 
+def read_dictionary_records(file_name):
+    
+    prog_langs = {}
+
+    with open(file_name, 'r') as file:
+        for line in file:
+            record = line.split('\t')
+            key = record[0]
+            year = record[1]
+            lang = record[2]
+            creator = record[3].rstrip('\n')
+
+            prog_langs[key] = [year, lang, creator]
+    
+    print(prog_langs)
 
