@@ -149,3 +149,17 @@ def pickle_dictionary(file_name):
     with open(file_name, 'wb') as file: 
         pickle.dump(phone_book, file)
 
+def unpickle_dictionary(file_name):
+
+    with open(file_name, 'rb') as file:
+        phone_book = pickle.load(file)
+
+    print(phone_book)
+
+def read_image_jpg_file(file_name):
+    
+    with open(file_name, 'rb') as image_file:
+        contents = image_file.read()
+
+    print(contents)
+
