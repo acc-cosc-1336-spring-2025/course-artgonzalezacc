@@ -40,3 +40,24 @@ def open_file_read_except_else(file_name):
         contents = file.read()
         print(contents)
         file.close()
+
+def open_file_except_finally(file_name):
+    try:
+        file = open(file_name, 'r')
+        #contents = file.read()
+
+        for line in file:
+            amount = int(line)
+            print(amount)
+
+        #print(contents)
+    except IOError:
+        print('Cannot open file')
+    except ValueError as err:
+        print('Invalid numeric data')
+    finally: #will always run error or no error
+        #close db connections, files, or network connections
+        print('Finally always runs')
+
+        if 'file' in locals():
+            file.close()
