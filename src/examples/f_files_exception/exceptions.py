@@ -30,3 +30,13 @@ def open_a_file_error(file_name):
 
     log_file.close()
 
+def open_file_read_except_else(file_name):
+    try:
+        file = open(file_name, 'r')
+        
+    except IOError:
+        print('Cannot read file: ')
+    else:
+        contents = file.read()
+        print(contents)
+        file.close()

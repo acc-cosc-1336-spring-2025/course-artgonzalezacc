@@ -3,7 +3,7 @@ import exceptions
 
 def main():
     
-    exceptions.open_a_file_error('myfile')
+    exceptions.open_file_read_except_else('langs.txt')
 
     
 
