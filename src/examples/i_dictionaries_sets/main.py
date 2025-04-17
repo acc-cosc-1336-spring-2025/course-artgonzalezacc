@@ -3,8 +3,6 @@ import dictionaries
 
 
 def main():
-    dictionaries.dictionary_items()
-    dictionaries.dictionary_keys()
-    dictionaries.dictionary_values()
+    dictionaries.run_menu()
 
 main()

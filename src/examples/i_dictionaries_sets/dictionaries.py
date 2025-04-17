@@ -1,32 +1,25 @@
 def test_config():
     return True
 
-def create_dictionary():
-    phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
+def display_menu():
+    print('1-Enter Survey Responses')
+    print('2-Get Survey Results')
+    print('3-Exit')
 
-    print(phone_book)
+def run_menu():
+    option = 0
 
-def loop_dictionary_w_for():
-    phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
+    while option != 3:
+        display_menu();
+        option = int(input('Enter option: '))
+        handle_menu_option(option)
 
-    for key in phone_book:
-        print(key, phone_book[key])
-
-
-def dictionary_items():
-    phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
-
-    for key, value in phone_book.items():
-        print(key, value)
-
-def dictionary_keys():
-    phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
-
-    for key in phone_book.keys():
-        print(key, phone_book[key])
-
-def dictionary_values():
-    phone_book = {'Chris':'555-1111', 'Katie':'555-2222', 'Joanne':'555-3333'}
-
-    for value in phone_book.values():
-        print(value)
+def handle_menu_option(option):
+    if(option == 1):
+        print('display survey question')
+    elif(option == 2):
+        print('survey results')
+    elif(option == 3):
+        print('Exiting...')
+    else:
+        print('Invalid option ...')
