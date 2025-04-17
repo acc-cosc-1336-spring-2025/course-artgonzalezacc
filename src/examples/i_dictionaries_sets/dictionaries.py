@@ -21,6 +21,9 @@ survey_question_options = \
     6: 'Always Always'
 }
 
+#list of lists
+survey_responses_list = []#survey_id, option_id, resonse
+
 def display_menu():
     print('1-Enter Survey Responses')
     print('2-Get Survey Results')
@@ -45,6 +48,8 @@ def handle_menu_option(option):
         print('Invalid option ...')
 
 def display_survey_questions():
+    survey_id = 1
+
     for question_id, question in survey_questions.items():
         print(question_id, question)
 
@@ -52,3 +57,9 @@ def display_survey_questions():
             print(option, value)
         
         response = input("Enter response: ")
+        capture_survey_response(survey_id, question_id, response)
+        survey_id += 1
+
+def capture_survey_response(survey_id, question_id, response):
+    survey_responses_list.append([survey_id, question_id, response])
+    print(survey_responses_list)
