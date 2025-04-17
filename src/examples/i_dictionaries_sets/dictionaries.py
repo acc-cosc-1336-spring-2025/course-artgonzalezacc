@@ -24,6 +24,9 @@ survey_question_options = \
 #list of lists
 survey_responses_list = []#survey_id, option_id, resonse
 
+survey_response_results = {}
+survey_response_results_total = {'2.1': 0, '2.2': 0, '2.3': 0, '2.4': 0, '2.5': 0}
+
 def display_menu():
     print('1-Enter Survey Responses')
     print('2-Get Survey Results')
@@ -41,7 +44,7 @@ def handle_menu_option(option):
     if(option == 1):
         display_survey_questions()
     elif(option == 2):
-        print('survey results')
+        tabulate_survey_response_results()
     elif(option == 3):
         print('Exiting...')
     else:
@@ -57,9 +60,22 @@ def display_survey_questions():
             print(option, value)
         
         response = input("Enter response: ")
-        capture_survey_response(survey_id, question_id, response)
+        capture_survey_response(survey_id, question_id, int(response))
         survey_id += 1
+        print(survey_responses_list)
 
 def capture_survey_response(survey_id, question_id, response):
     survey_responses_list.append([survey_id, question_id, response])
-    print(survey_responses_list)
+
+def tabulate_survey_response_results():
+    cnt = 0
+
+    for response in survey_responses_list:
+        print(response)
+
+        survey_response_results_total[response[1]] += response[2]
+
+        if '2.5' == response[1]:
+            cnt += 1
+
+    print(survey_response_results_total)
