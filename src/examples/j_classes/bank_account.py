@@ -7,3 +7,8 @@ class BankAccount: #encapsulates variables and functions
 
     def get_balance(self): #functions/methods 
         return self.__balance;
+
+    def deposit(self, amount):
+
+        if(amount > 0):
+            self.__balance += amount
