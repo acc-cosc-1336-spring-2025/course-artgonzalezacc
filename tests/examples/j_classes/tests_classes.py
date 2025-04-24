@@ -26,3 +26,17 @@ class Test_Config(unittest.TestCase):
 
         account1.deposit(-100)
         self.assertEqual(account1.get_balance(), 500)
+
+    def test_bank_account_withdraw(self):
+        account1 = BankAccount(500)
+        self.assertEqual(account1.get_balance(), 500)
+
+        account1.withdraw(100)
+        self.assertEqual(account1.get_balance(), 400)
+
+    def test_bank_account_withdraw_less_than_0(self):
+        account1 = BankAccount(500)
+        self.assertEqual(account1.get_balance(), 500)
+
+        account1.withdraw(-100)
+        self.assertEqual(account1.get_balance(), 500)

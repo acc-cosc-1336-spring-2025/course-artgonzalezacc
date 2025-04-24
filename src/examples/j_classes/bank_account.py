@@ -12,3 +12,7 @@ class BankAccount: #encapsulates variables and functions
 
         if(amount > 0):
             self.__balance += amount
+
+    def withdraw(self, amount):
+        if(amount > 0 and amount <= self.__balance):
+            self.__balance -= amount
