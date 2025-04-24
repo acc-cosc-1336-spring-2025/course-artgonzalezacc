@@ -16,3 +16,14 @@ class BankAccount: #encapsulates variables and functions
     def withdraw(self, amount):
         if(amount > 0 and amount <= self.__balance):
             self.__balance -= amount
+
+
+#FREE FUNCTION(DOESN'T BELONG TO THE BANKACCOUNT CLASS)
+def make_deposit(account):
+    print(id(account))
+    amt = 100
+    account.deposit(amt)
+
+def modify_num(num):
+    print(id(num)) # research why same address displayed; but different value in test case
+    num = 10
