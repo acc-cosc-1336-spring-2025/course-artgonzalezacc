@@ -1,5 +1,6 @@
 import unittest
 
+from src.examples.j_classes.bank_account_db import BankAccountDB
 from src.examples.j_classes.bank_account import BankAccount, get_account_object, make_deposit, modify_num
 
 class Test_Config(unittest.TestCase):
@@ -65,5 +66,11 @@ class Test_Config(unittest.TestCase):
     def test_get_account_object(self):
         account = get_account_object()
         print("object", id(account))
+
+    def test_bank_account_db_get_current_balance(self):
+        db = BankAccountDB();
+
+        self.assertEqual(True, db.get_current_balance() >= 1)
+        self.assertEqual(True, db.get_current_balance() <= 10000)
 
 

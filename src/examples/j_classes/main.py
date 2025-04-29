@@ -1,8 +1,11 @@
 from bank_account import BankAccount
 from atm import ATM
+from bank_account_db import BankAccountDB
 
 def main():
-    account1 = BankAccount(500) #variable represents a BankAccount--- object or instance of a class
+    
+    bankAccountDB = BankAccountDB()
+    account1 = BankAccount(bankAccountDB.get_current_balance()) #variable represents a BankAccount--- object or instance of a class
     atm = ATM(account1)
 
     atm.display_balance()
