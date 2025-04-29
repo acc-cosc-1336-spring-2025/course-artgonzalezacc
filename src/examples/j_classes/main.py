@@ -1,5 +1,5 @@
 from bank_account import BankAccount
-from atm import ATM
+from atm import ATM, run_menu
 from bank_account_db import BankAccountDB
 
 def main():
@@ -8,11 +8,8 @@ def main():
     account1 = BankAccount(bankAccountDB.get_current_balance()) #variable represents a BankAccount--- object or instance of a class
     atm = ATM(account1)
 
-    atm.display_balance()
-    atm.make_deposit()
-    atm.make_withdraw()
+    run_menu(atm)
 
-    atm.display_balance()
     print(account1.get_balance())
 
 main()
