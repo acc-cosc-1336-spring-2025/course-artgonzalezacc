@@ -5,8 +5,8 @@ from customer import Customer
 
 def main():
     
-    bankAccountDB = BankAccountDB()
-    account1 = BankAccount(bankAccountDB.get_current_balance()) #variable represents a BankAccount--- object or instance of a class
+    #bankAccountDB = BankAccountDB()
+    account1 = BankAccount(0) #variable represents a BankAccount--- object or instance of a class
     customer = Customer(account1)
     atm = ATM(customer)
 

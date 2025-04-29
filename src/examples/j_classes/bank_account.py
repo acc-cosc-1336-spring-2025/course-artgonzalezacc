@@ -1,9 +1,15 @@
+import random
+
 class BankAccount: #encapsulates variables and functions
 
     __balance = 0 #variables PRIVATE
 
     def __init__(self, balance): #constructor - assign values to class private members/variables
-        self.__balance = balance
+        
+        if(balance == 0):
+            self.__get_balance_from_db()
+        else:
+            self.__balance = balance
 
     def get_balance(self): #functions/methods 
         return self.__balance;
@@ -16,6 +22,9 @@ class BankAccount: #encapsulates variables and functions
     def withdraw(self, amount):
         if(amount > 0 and amount <= self.__balance):
             self.__balance -= amount
+
+    def __get_balance_from_db(self):
+        self.__balance = random.randint(1, 10000)
 
 
 #FREE FUNCTION(DOESN'T BELONG TO THE BANKACCOUNT CLASS)
