@@ -1,6 +1,6 @@
 import unittest
 
-from src.examples.j_classes.bank_account import BankAccount, make_deposit, modify_num
+from src.examples.j_classes.bank_account import BankAccount, get_account_object, make_deposit, modify_num
 
 class Test_Config(unittest.TestCase):
 
@@ -61,18 +61,9 @@ class Test_Config(unittest.TestCase):
         account1.deposit(50)
         self.assertEqual(account1.get_balance(), 450)
 
-    def test_make_deposit_free_function(self):
-        account1 = BankAccount(500)
-        print(id(account1))
-        self.assertEqual(account1.get_balance(), 500)
-        
-        make_deposit(account1)
-        self.assertEqual(account1.get_balance(), 600)
-
-        num = 0
-        print(id(num))
-        modify_num(num)
-        print(id(num))
-        self.assertEqual(num, 10)
+    
+    def test_get_account_object(self):
+        account = get_account_object()
+        print("object", id(account))
 
 

@@ -27,3 +27,8 @@ def make_deposit(account):
 def modify_num(num):
     print(id(num)) # research why same address displayed; but different value in test case
     num = 10
+
+def get_account_object():
+    account = BankAccount(50)
+    print("get_account_object", id(account))
+    return account
