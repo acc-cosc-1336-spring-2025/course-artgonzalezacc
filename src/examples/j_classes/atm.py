@@ -1,7 +1,7 @@
 from bank_account import BankAccount
 from bank_account_db import BankAccountDB
 from customer import Customer
-
+from random import randint
 
 class ATM:
 
@@ -20,6 +20,13 @@ class ATM:
         self.__account.withdraw(amt)
 
 #free functions - not part of the atm class
+db = BankAccountDB()
+customers = []
+customers.append(Customer(BankAccount(0), BankAccount(db.get_current_balance())))
+customers.append(Customer(BankAccount(0), BankAccount(db.get_current_balance())))
+customers.append(Customer(BankAccount(0), BankAccount(db.get_current_balance())))
+
+
 def display_menu():
     print('ACC Example Bank')
     print('1-Display Balance')
@@ -30,21 +37,24 @@ def display_menu():
 def run_menu():
     choice = 0
 
-    account_index = int(input("Enter 1 for Checking 2 for Savings: "))
-
-    bankAccountDB = BankAccountDB()
-    account1 = BankAccount(0) #variable represents a BankAccount--- object or instance of a class
-    account2 = BankAccount(bankAccountDB.get_current_balance()) 
     
-    customer = Customer(account1, account2)
-    account = customer.get_bank_account(account_index-1)
-    atm = ATM(account)
+    while(True):
+        num = input("press enter to start: ")
+        customer_index = randint(0, len(customers)-1)
+        customer = customers[customer_index]
 
-    while(choice != 4):
-        display_menu()
-        choice = int(input("Enter menu choice: "))
+        account_index = int(input("Enter 1 for Checking 2 for Savings: "))
+        account = customer.get_bank_account(account_index-1)
+        atm = ATM(account)
 
-        handle_user_choice(atm, choice)
+        while(choice != 4):
+            display_menu()
+            choice = int(input("Enter menu choice: "))
+
+            handle_user_choice(atm, choice)
+
+        if(choice == 4):
+                choice = 0
 
 def handle_user_choice(atm, choice):
     if(choice == 1):
