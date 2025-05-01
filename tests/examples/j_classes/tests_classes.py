@@ -1,5 +1,6 @@
 import unittest
 
+from src.examples.j_classes.more_classes.roll import Roll
 from src.examples.j_classes.more_classes.die import Die
 from src.examples.j_classes.bank_account_db import BankAccountDB
 from src.examples.j_classes.bank_account import BankAccount, get_account_object, make_deposit, modify_num
@@ -81,4 +82,14 @@ class Test_Config(unittest.TestCase):
             rolled_value = die.roll()
             self.assertEqual(rolled_value >= 1, True)
             self.assertEqual(rolled_value <= 6, True)
+
+    def test_roll_for_values_1_to_12(self):
+        die1 = Die()
+        die2 = Die()
+
+        for i in range(0, 24):
+            roll = Roll(die1, die2)
+            rolled_value = roll.roll_value()
+            self.assertEqual(rolled_value >= 2, True)
+            self.assertEqual(rolled_value <= 12, True)
 
