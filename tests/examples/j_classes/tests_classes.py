@@ -1,5 +1,6 @@
 import unittest
 
+from src.examples.j_classes.more_classes.die import Die
 from src.examples.j_classes.bank_account_db import BankAccountDB
 from src.examples.j_classes.bank_account import BankAccount, get_account_object, make_deposit, modify_num
 
@@ -73,4 +74,11 @@ class Test_Config(unittest.TestCase):
         self.assertEqual(True, db.get_current_balance() >= 1)
         self.assertEqual(True, db.get_current_balance() <= 10000)
 
+    def test_die_rolls_values_1_to_6(self):
+        die = Die()
+
+        for i in range(0, 20):
+            rolled_value = die.roll()
+            self.assertEqual(rolled_value >= 1, True)
+            self.assertEqual(rolled_value <= 6, True)
 
