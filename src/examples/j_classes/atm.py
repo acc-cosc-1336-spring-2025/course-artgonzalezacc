@@ -1,9 +1,12 @@
+from bank_account import BankAccount
+from bank_account_db import BankAccountDB
+from customer import Customer
+
 
 class ATM:
 
-    def __init__(self, customer):
-        self.__customer = customer
-        self.__account = self.__customer.get_bank_account()
+    def __init__(self, account):
+        self.__account = account
 
     def display_balance(self):
         print(self.__account.get_balance())
@@ -24,8 +27,18 @@ def display_menu():
     print('3-Make Withdraw')
     print('4-Exit')
 
-def run_menu(atm):
+def run_menu():
     choice = 0
+
+    account_index = int(input("Enter 1 for Checking 2 for Savings: "))
+
+    bankAccountDB = BankAccountDB()
+    account1 = BankAccount(0) #variable represents a BankAccount--- object or instance of a class
+    account2 = BankAccount(bankAccountDB.get_current_balance()) 
+    
+    customer = Customer(account1, account2)
+    account = customer.get_bank_account(account_index-1)
+    atm = ATM(account)
 
     while(choice != 4):
         display_menu()

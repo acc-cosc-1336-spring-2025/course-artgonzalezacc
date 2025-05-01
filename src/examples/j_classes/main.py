@@ -5,13 +5,6 @@ from customer import Customer
 
 def main():
     
-    #bankAccountDB = BankAccountDB()
-    account1 = BankAccount(0) #variable represents a BankAccount--- object or instance of a class
-    customer = Customer(account1)
-    atm = ATM(customer)
-
-    run_menu(atm)
-
-    print(account1.get_balance())
+    run_menu()
 
 main()
