@@ -13,3 +13,10 @@ class Customer:
     
     def get_customer_name(self):
         return self.__first_name + ' ' + self.__last_name
+    
+    def get_first_name(self):
+        return self.__first_name
+    
+    def get_last_name(self):
+
+        return self.__last_name

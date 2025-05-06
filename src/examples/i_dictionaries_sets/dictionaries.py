@@ -150,3 +150,30 @@ def add_customers_to_dictionary():
         customers_from_file = pickle.load(file)
 
     print(customers_from_file)
+
+def write_read_customer_dictionary_to_file_no_pickle():
+    customer1 = Customer(123456, 'John', 'Doe')
+    customer2 = Customer(789123, 'Mary', 'Doe')
+    customer3 = Customer(987654, 'Joe', 'Doe')
+
+    customers = {}
+    customers[customer1.get_customer_id()] = customer1
+    customers[customer2.get_customer_id()] = customer2
+    customers[customer3.get_customer_id()] = customer3
+
+    file_name = "no_pickle_customers.dat"
+    with open(file_name, 'w') as file:
+        for customer in customers.values():
+            file.write(str(customer.get_customer_id()) + '\t')
+            file.write(customer.get_first_name() + '\t')
+            file.write(customer.get_last_name() + '\n')
+
+    read_customer_dictionary = {}
+
+    with open(file_name, 'r') as file:
+        for line in file:
+            record = line.split('\t')
+            customer = Customer(int(record[0]), record[1], record[2].rstrip('\n'))
+            read_customer_dictionary[customer.get_customer_id()] = customer.get_customer_name()
+
+    print(read_customer_dictionary)

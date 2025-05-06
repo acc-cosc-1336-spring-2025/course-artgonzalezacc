@@ -3,6 +3,6 @@ import dictionaries
 
 
 def main():
-    dictionaries.add_customers_to_dictionary()
+    dictionaries.write_read_customer_dictionary_to_file_no_pickle()
 
 main()
