@@ -1,3 +1,5 @@
+import pickle
+
 from customer import Customer
 
 
@@ -139,3 +141,12 @@ def add_customers_to_dictionary():
 
     for key, value in customers.items():
         print(key, value)
+
+    file_name = 'customer.dat'
+    with open(file_name, 'wb') as file: 
+        pickle.dump(customers, file)
+
+    with open(file_name, 'rb') as file:
+        customers_from_file = pickle.load(file)
+
+    print(customers_from_file)
