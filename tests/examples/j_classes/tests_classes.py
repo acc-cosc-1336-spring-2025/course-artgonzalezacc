@@ -1,5 +1,6 @@
 import unittest
 
+from src.examples.j_classes.more_classes.player import Player
 from src.examples.j_classes.more_classes.roll import Roll
 from src.examples.j_classes.more_classes.die import Die
 from src.examples.j_classes.bank_account_db import BankAccountDB
@@ -92,4 +93,15 @@ class Test_Config(unittest.TestCase):
             rolled_value = roll.roll_value()
             self.assertEqual(rolled_value >= 2, True)
             self.assertEqual(rolled_value <= 12, True)
+
+    def test_player_roll_dice_values_1_to_12(self):
+        die1 = Die()
+        die2 = Die()
+        player = Player()
+
+        for i in range(0, 24):
+            roll = player.roll_dice(die1, die2)
+
+            self.assertEqual(True, roll.roll_value() >= 2)
+            self.assertEqual(True, roll.roll_value() <= 12)
 
