@@ -3,6 +3,6 @@ import dictionaries
 
 
 def main():
-    dictionaries.run_menu()
+    dictionaries.add_customers_to_dictionary()
 
 main()

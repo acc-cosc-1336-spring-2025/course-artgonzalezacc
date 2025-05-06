@@ -1,3 +1,6 @@
+from customer import Customer
+
+
 def test_config():
     return True
 
@@ -122,3 +125,17 @@ def get_faculty_rating(ratio):
     
     else: 
         return 'Invalid value'
+    
+
+def add_customers_to_dictionary():
+    customer1 = Customer(123456, 'John', 'Doe')
+    customer2 = Customer(789123, 'Mary', 'Doe')
+    customer3 = Customer(987654, 'Joe', 'Doe')
+
+    customers = {}
+    customers[customer1.get_customer_id()] = customer1.get_customer_name()
+    customers[customer2.get_customer_id()] = customer2.get_customer_name()
+    customers[customer3.get_customer_id()] = customer3.get_customer_name()
+
+    for key, value in customers.items():
+        print(key, value)
